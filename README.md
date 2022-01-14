@@ -8,3 +8,5 @@
 4. Ejecutar ``php bin/console doctrine:migrations:migrate`` para ejecutar las migraciones
 5. Copiar el pack de datos iniciales
 6. Ejecutar ``php bin/console doctrine:fixtures:load`` para cargar los datos de ejemplo.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
