@@ -41,8 +41,23 @@ class ApiController extends AbstractController
       }
 
     function getTweetfonyUser($id) {
-        // TODO
-        return new JsonResponse();
+        // obtenemos el usuario
+        $entityManager = $this->getDoctrine()->getManager();
+        $user = $entityManager->getRepository(User::class)->find($id);
+        // Si el usuario no existe devolvemos un error con código 404.
+        if ($user == null) {
+            return new JsonResponse([
+                'error' => 'User not found'
+            ], 404);
+        }
+        // Creamos un objeto genérico y lo rellenamos con la información.
+        $result = new \stdClass();
+        $result->id = $user->getId();
+        $result->name = $user->getName();
+        $result->user_name = $user->getUserName();
+        
+        // Al utilizar JsonResponse, la conversión del objeto $result a JSON se hace de forma automática.
+        return new JsonResponse($result);
     }
     
     function index() {
