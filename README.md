@@ -9,4 +9,6 @@
 5. Copiar el pack de datos iniciales
 6. Ejecutar ``php bin/console doctrine:fixtures:load`` para cargar los datos de ejemplo.
 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Uso Postman para las pruebas
+https://github.com/AlbertoArraz/tweetfony/blob/main/tests/API%20Tweetfony.postman_collection.json
